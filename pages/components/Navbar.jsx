@@ -1,24 +1,11 @@
+import { Menu } from "@headlessui/react";
+import Link from "next/link";
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export default function Example() {
+export default function Navbar() {
   return (
     
     <nav className="flex justify-between m-[20px] border-black">
-      <img src="#" alt="TripMate Logo" className="border-solid-[1px]-black" />
+      <img src="#" alt="TripMate Logo"  />
       <ul className="flex">
         <li>Home</li>
         <li>New Adventure</li>
@@ -29,8 +16,19 @@ export default function Example() {
       </ul>
       <div className="flex">
         <img src="#" alt="Profile photo" />
-        <button>Login</button>
-        <button>Logout</button>
+        <Menu>
+
+        <Menu.Item key="/api/login">
+          <Link href="/api/login">
+            Login
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="/api/logout">
+          <Link href="/api/logout">
+            Logout
+          </Link>
+        </Menu.Item>
+        </Menu>
       </div>
     </nav>
   ) 
