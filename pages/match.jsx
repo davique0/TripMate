@@ -72,7 +72,7 @@ export default function Match({ users }) {
     const matchId = data.id;
     const adventureId = data.id;
     const body = { matchId, adventureId };
-    await fetch("/api/createChat", {
+    await axios("/api/createChat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
