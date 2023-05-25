@@ -7,8 +7,8 @@ export default async function handler(req, res) {
   const prisma = new PrismaClient();
   const chat = await prisma.chat.create({
     data: {
-      adventure: aId,
-      match: mId,
+      adventure_id: aId,
+      match_id: mId,
       active: true
     },
   });
