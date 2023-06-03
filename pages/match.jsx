@@ -70,7 +70,7 @@ export default function Match({ users }) {
       },
     });
     const matchId = data.id;
-    const adventureId = data.id;
+    const adventureId = data.adventure;
     const body = { matchId, adventureId };
     await fetch("/api/createChat", {
       method: "POST",
