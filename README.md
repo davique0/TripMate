@@ -1,10 +1,10 @@
 ## Description 
 
-TripMate is an app that uses React, Next.js , Prisma, and Tailwind CSS to find the perfect mate for your next adventure! 
+TripMate is an app that uses React, Next.js, Prisma, and Tailwind CSS to find the perfect mate for your next adventure! 
 
 ## Getting Started
 
-1. Install Dependencies 
+1. Install dependencies 
 
 2. Run the development server:
 
